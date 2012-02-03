@@ -15,18 +15,22 @@
 
 #m2mikp_base img {
     margin: 10px;
--moz-border-radius: 3px;
--webkit-border-radius: 3px;
-border-radius: 3px;
-/*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
--moz-box-shadow: 0px 30px 30px -30px #000000;
--webkit-box-shadow: 0px 30px 30px -30px #000000;
-box-shadow: 0px 30px 30px -30px #000000;
-filter: progid: DXImageTransform.Microsoft.Shadow(strength = 30, direction = 180, color = '#000000');
--ms-filter: "progid: DXImageTransform.Microsoft.Shadow(strength = 30, Direction = 180, Color = '#000000')";
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    /*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+    -moz-box-shadow: 0px 30px 30px -30px #000000;
+    -webkit-box-shadow: 0px 30px 30px -30px #000000;
+    box-shadow: 0px 30px 30px -30px #000000;
+    filter: progid: DXImageTransform.Microsoft.Shadow(strength = 30, direction = 180, color = '#000000');
+    -ms-filter: "progid: DXImageTransform.Microsoft.Shadow(strength = 30, Direction = 180, Color = '#000000')";
 }
 
 #id_imagens {
     /* display: none; */
     margin-left: -94px;
+}
+
+#m2mikp_base .remove_action img {
+    margin-left: -5px;
 }

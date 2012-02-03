@@ -31,7 +31,8 @@ def get_thumbs(request):
                 {
                     'original': getattr(x, original_image_str, None),
                     'thumb': getattr(x, thumb_spec_str, None),
-                    'title': getattr(x, '__unicode__', None)
+                    'title': getattr(x, '__unicode__', None),
+                    'id': getattr(x, 'id', None)
                 } for x in objects
             ]
         })

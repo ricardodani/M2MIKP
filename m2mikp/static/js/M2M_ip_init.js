@@ -34,6 +34,7 @@
             success: function(data){
                 $('#m2mikp_base').html('');
                 $('#m2mikp_base').append(data);
+                $("a[rel^='prettyPhoto']").prettyPhoto();
             }
         });
     }
@@ -51,6 +52,10 @@
 
         M2MIKP_Populate(options, field_spec);
         
+    }
+    
+    function include(arr,obj) {
+        return (arr.indexOf(obj) != -1);
     }
     
     $(document).ready(function() {
@@ -73,6 +78,28 @@
         field.live('focusin', function() {
             field.change();
         });
-    
+
+        $("#m2mikp_base .remove_action").live('click', function() {
+            var id = $(this).attr('id');
+            var value = field.attr('value');
+            var new_value = value.replace(id, '');
+
+            var ugly_list = new_value.split(',');
+            var beauty_list = [];
+
+            for (i in ugly_list) {
+                if (ugly_list[i] && !include(beauty_list, ugly_list[i])) {
+                    beauty_list.push(ugly_list[i]);
+                }
+            }
+
+            field.attr('value', beauty_list.join(','));
+
+            $(this).parent().remove();
+
+        }); 
+        
     })
+    $(document).live('ready', function(){
+    }); 
 }(django.jQuery));
