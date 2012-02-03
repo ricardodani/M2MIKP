@@ -1,0 +1,32 @@
+#m2mikp_base {
+    background-color: #F6F6F6;
+    width: 500px;
+    height: 150px;
+    box-shadow: 0 1px 3px #EAEAEA inset;
+    border: 1px solid #CCC;
+    border-radius: 3px;
+    color: #666;
+    outline: 0 none;
+    padding: 10px;
+    overflow: auto;
+    white-space: nowrap;
+    float: left;
+}
+
+#m2mikp_base img {
+    margin: 10px;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+/*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+-moz-box-shadow: 0px 30px 30px -30px #000000;
+-webkit-box-shadow: 0px 30px 30px -30px #000000;
+box-shadow: 0px 30px 30px -30px #000000;
+filter: progid: DXImageTransform.Microsoft.Shadow(strength = 30, direction = 180, color = '#000000');
+-ms-filter: "progid: DXImageTransform.Microsoft.Shadow(strength = 30, Direction = 180, Color = '#000000')";
+}
+
+#id_imagens {
+    /* display: none; */
+    margin-left: -94px;
+}

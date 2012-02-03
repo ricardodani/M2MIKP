@@ -1,0 +1,3 @@
+{% for image in image_list %}
+<a href="{{ image.original.url }}"><img src="{{ image.thumb.url }}" alt="{{ image.title }}" title="{{ image.title }}" /></a>
+{% endfor %}
